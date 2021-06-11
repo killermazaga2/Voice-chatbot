@@ -4,7 +4,6 @@ from tkinter import *
 import pywhatkit
 import datetime
 import wikipedia
-import pyjokes
 import webbrowser
 import pyttsx3
 import speech_recognition as sr
@@ -48,7 +47,6 @@ information=[
     "I'm from Tinesh's heart",
     'Where are you from?',
     "I'm from Chennai",
-    "Where are you from?",
     "I'm from Chennai too",
     "What is your owner doing?",
     'My owner is exploring his life'
@@ -132,11 +130,6 @@ def take_query():
                 talk(info)
                 textF.delete(0,END)
                 msgs.yview(END)
-            elif 'joke' in query:
-                py_joke =pyjokes.get_joke 
-                msgs.insert(END, "You: "+ query)
-                msgs.insert(END, "alexa: "+ py_joke)
-                talk(py_joke)
             elif 'search' in query:
                 search= query.replace('search', '')
                 url= 'https://google.com/search?q=' + search
