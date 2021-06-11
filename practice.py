@@ -144,6 +144,12 @@ def take_query():
                 msgs.insert(END, "You: "+ query)
                 msgs.insert(END, "alexa: Here is what I have found "+ search)
                 talk("Here is what I have found")
+            elif 'instagram' in query:
+                url='https://www.instagram.com/'
+                webbrowser.get().open(url)
+                msgs.insert(END, "You: "+ query)
+                msgs.insert(END, "alexa: Happy Insta gramming")
+                talk("Happy Instagramming")
             else:
                 ask_from_alexa()    
         except Exception as e:
