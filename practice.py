@@ -50,7 +50,7 @@ main.geometry("500x650")
 
 main.title("Alexa the ChatBot")
 
-def takeQuery():
+def take_query():
     listener = sr.Recognizer()
     listener.pause_threshold=1
     print("Alexa is listening ...")
@@ -105,8 +105,9 @@ main.bind('<Return>', enter_function)
 
 def repeatL():
     while True:
-        takeQuery()
-t=threading.Thread(target=takeQuery)
+        take_query()
+
+t=threading.Thread(target=repeatL)
 
 t.start()
 
